@@ -17,8 +17,10 @@
     "next": "^10.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "remark": "^13.0.0",
-    "remark-html": "^13.0.1"
+    "remark-highlight.js": "^6.0.0",
+    "remark-html": "^13.0.1",
+    "remark-parse": "^9.0.0",
+    "unified": "^9.2.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.19",

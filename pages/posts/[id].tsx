@@ -7,7 +7,6 @@ import Layout from "../layout";
 import Head from "next/head";
 import PostHeader from "../../components/post-header";
 
-
 const Post: FunctionComponent<PostProps> = (props) => {
     const { post } = props;
 
@@ -21,7 +20,10 @@ const Post: FunctionComponent<PostProps> = (props) => {
                     <img src={post.coverUrl} className="object-fill w-full" />
                     <div className="p-8">
                         <PostHeader post={post}></PostHeader>
-                        <div className={`prose prose-${post.theme} max-w-3xl mx-auto`} dangerouslySetInnerHTML={{ __html: post.content }} />
+                        <div
+                            className={`prose prose-${post.theme} max-w-3xl mx-auto`}
+                            dangerouslySetInnerHTML={{ __html: post.content }}
+                        />
                     </div>
                 </article>
             </Layout>

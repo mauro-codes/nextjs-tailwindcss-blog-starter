@@ -2,8 +2,10 @@ import path from "path"
 import fs from 'fs'
 import matter from "gray-matter"
 import { PostMetadata } from "../types/PostMetadata"
-import remark from 'remark'
-import html from 'remark-html'
+const unified = require('unified')
+const highlight = require('remark-highlight.js')
+var markdown = require('remark-parse')
+var html = require('remark-html')
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -27,7 +29,9 @@ const getPostData = async (id: string): Promise<PostMetadata> => {
     const matterResult = matter(fileContents)
 
     // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
+    const processedContent = await unified()
+        .use(markdown)
+        .use(highlight)
         .use(html)
         .process(matterResult.content)
     const contentHtml = processedContent.toString()
