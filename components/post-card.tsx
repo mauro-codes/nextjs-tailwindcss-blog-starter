@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
+import TagList from "./TagList";
 type PostCardProps = {
-    category: string;
+    tags: string[];
     title: string;
     description: string;
     coverUrl: string;
@@ -9,14 +10,14 @@ type PostCardProps = {
 };
 
 const PostCard: FunctionComponent<PostCardProps> = (props) => {
-    const { category, title, description, coverUrl, date, id } = props;
+    const { tags, title, description, coverUrl, date, id } = props;
 
     return (
         <div className="relative">
             <div className="w-full h-full">
                 <img src={coverUrl} alt="" className="object-cover h-48 w-full" />
                 <div className="p-4 bg-white">
-                    <p className="text-indigo-600 font-semibold mb-2">{category}</p>
+                    <TagList tags={tags}></TagList>
                     <h2 className="text-2xl font-semibold mb-3">{title}</h2>
                     <p className="text-gray-500">{description}</p>
                 </div>

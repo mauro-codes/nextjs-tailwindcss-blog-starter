@@ -16,7 +16,7 @@ const Post: FunctionComponent<PostProps> = (props) => {
                 <title>{post.title}</title>
             </Head>
             <Layout>
-                <article className="max-w-6xl mt-12 rounded-xl mx-auto bg-white">
+                <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white">
                     <img src={post.coverUrl} className="object-fill w-full" />
                     <div className="p-8">
                         <PostHeader post={post}></PostHeader>

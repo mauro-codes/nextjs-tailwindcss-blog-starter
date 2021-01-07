@@ -40,8 +40,9 @@ const getPostData = async (id: string): Promise<PostMetadata> => {
     return {
         id,
         content: contentHtml,
+        ...matterResult.data,
         theme: matterResult.data.theme || "indigo",
-        ...matterResult.data
+        tags: (matterResult.data.tags as string).trim().split(","), 
     } as PostMetadata
 }
 
@@ -62,7 +63,8 @@ const getSortedPostsData = (): PostMetadata[] => {
         // Combine the data with the id
         return {
             id,
-            ...matterResult.data
+            ...matterResult.data,
+            tags: (matterResult.data.tags as string).trim().split(",")
         } as PostMetadata
     })
     // Sort posts by date

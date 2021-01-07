@@ -4,7 +4,7 @@ export type PostMetadata = {
     date: string
     coverUrl: string
     content: string
-    category: string
+    tags: string[]
     description: string,
     theme: string
 }
