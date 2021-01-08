@@ -10,10 +10,10 @@ Here's a list of the features included:
 Already applied to the entire project and ready to be used in your custom components.
 
 ## TailwindCSS 2.0.2
-The entire blog was built using tailwindcss and the [typography plugin](https://tailwindcss.com/docs/typography-plugin) is used to generate beautiful typographic defaults to any vanilla HTML on your posts.
+The entire blog was built using tailwindcss. The [typography plugin](https://tailwindcss.com/docs/typography-plugin) was also used to generate beautiful typographic defaults to any vanilla HTML on your posts.
 
 ## Markdown support 
-If you wan't to add your posts using markdown, just start adding .md files within the posts folder located in the root of the project.
+To start adding your posts using markdown, just add new .md files within the posts folder located in the root of the project.
 
 ### Syntax highlight
 All your posts will include syntax highlight thanks to [unified.js](https://github.com/unifiedjs/unified) and [remark-highlight](https://github.com/remarkjs/remark-highlight.js?files=1)
@@ -34,9 +34,11 @@ theme: 'indigo'
 By adding the "theme" meta-data at the top of your posts, you can change the accent color for each post. This feature use the tailwindcss colors behind the scene so you can choose between red, green, blue, indigo, yellow, etc.
 	
 **Indigo theme**
+
 ![post using indigo theme](https://i.imgur.com/IEaBMys.png)
 
 **Yellow theme**
+
 ![post using yellow theme](https://i.imgur.com/hbjW5vN.png)
 
 ## Responsive design
