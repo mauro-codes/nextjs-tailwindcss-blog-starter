@@ -3,7 +3,7 @@ import { ParsedUrlQuery } from "querystring";
 import { FunctionComponent } from "react";
 import { getAllPostsIds, getPostData } from "../../lib/posts";
 import { PostMetadata } from "../../types/PostMetadata";
-import Layout from "../layout";
+import Layout from "../../components/layout";
 import Head from "next/head";
 import PostHeader from "../../components/post-header";
 
@@ -17,7 +17,7 @@ const Post: FunctionComponent<PostProps> = (props) => {
             </Head>
             <Layout>
                 <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white">
-                    <img src={post.coverUrl} className="object-fill w-full" />
+                    <img src={post.coverUrl} className="object-cover w-full h-64" />
                     <div className="p-8">
                         <PostHeader post={post}></PostHeader>
                         <div

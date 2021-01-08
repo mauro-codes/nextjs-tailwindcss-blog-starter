@@ -5,7 +5,7 @@ import Hero from "../components/hero";
 import PostList from "../components/post-list";
 import { getSortedPostsData } from "../lib/posts";
 import { PostMetadata } from "../types/PostMetadata";
-import Layout from "./layout";
+import Layout from "../components/layout";
 
 const posts: PostMetadata[] = [
     
