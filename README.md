@@ -141,6 +141,8 @@ Here's a list of the upcoming features I'm working on:
 - Customizable themes for the entire site
 - RSS feed
 - MDX support
+- Navigation by tag and by year
+- Support for series of posts
 
 
 If you want to support my work, you can [☕️ buy me a coffe](https://www.buymeacoffee.com/mauro.codes)
