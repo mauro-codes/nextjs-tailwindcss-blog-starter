@@ -15,7 +15,7 @@ const PostCard: FunctionComponent<PostCardProps> = (props) => {
     return (
         <div className="relative">
             <div className="w-full h-full">
-                <img src={coverUrl} alt="" className="object-cover h-48 w-full" />
+                <img src={coverUrl} alt="" className="object-cover h-auto lg:h-44 w-full" />
                 <div className="p-4 bg-white">
                     <TagList tags={tags}></TagList>
                     <h2 className="text-2xl font-semibold mb-3">{title}</h2>
