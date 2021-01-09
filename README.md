@@ -1,7 +1,7 @@
 If you want to have your Next.js custom blog and don't want to build it from scratch, this boilerplate is for you
 
 ![post using indigo theme](https://i.imgur.com/o4I8SBZ.png)
-
+<br/>
 
 # Features
 Here's a list of the features included:
@@ -10,10 +10,10 @@ Here's a list of the features included:
 Already applied to the entire project and ready to be used in your custom components.
 
 ## TailwindCSS 2.0.2
-The entire blog was built using tailwindcss and the [typography plugin](https://tailwindcss.com/docs/typography-plugin) is used to generate beautiful typographic defaults to any vanilla HTML on your posts.
+The entire blog was built using tailwindcss. The [typography plugin](https://tailwindcss.com/docs/typography-plugin) was also used to generate beautiful typographic defaults to any vanilla HTML on your posts.
 
 ## Markdown support 
-If you wan't to add your posts using markdown, just start adding .md files within the posts folder located in the root of the project.
+To start adding your posts using markdown, just add new .md files within the posts folder located in the root of the project.
 
 ### Syntax highlight
 All your posts will include syntax highlight thanks to [unified.js](https://github.com/unifiedjs/unified) and [remark-highlight](https://github.com/remarkjs/remark-highlight.js?files=1)
@@ -34,9 +34,11 @@ theme: 'indigo'
 By adding the "theme" meta-data at the top of your posts, you can change the accent color for each post. This feature use the tailwindcss colors behind the scene so you can choose between red, green, blue, indigo, yellow, etc.
 	
 **Indigo theme**
+
 ![post using indigo theme](https://i.imgur.com/IEaBMys.png)
 
 **Yellow theme**
+
 ![post using yellow theme](https://i.imgur.com/hbjW5vN.png)
 
 ## Responsive design
@@ -45,12 +47,25 @@ The entire blog was carefully optimized to look good in any screen.
 ## Font Awesome
 The project use font awesome for the social links and for those included in the post header.
 
+<br/>
+
+# First use
+In order to start using your blog, just run the following commands:
+```bash
+npm run build
+npm run dev
+```
+
+<br/>
+
 # Generate your static blog
 In order to export a static version of your blog, just run the following command:
 ```bash
 npx next export
 ```
 After finishing, you'll find all the static resources within the `out` folder.
+
+<br/>
 
 # Customization
 
@@ -117,6 +132,7 @@ const Config: ConfigProps = {
     ]
 }
 ``` 
+<br/>
 
 # Roadmap
 Here's a list of the upcoming features I'm working on:
@@ -125,6 +141,8 @@ Here's a list of the upcoming features I'm working on:
 - Customizable themes for the entire site
 - RSS feed
 - MDX support
+- Navigation by tag and by year
+- Support for series of posts
 
 
 If you want to support my work, you can [☕️ buy me a coffe](https://www.buymeacoffee.com/mauro.codes)
