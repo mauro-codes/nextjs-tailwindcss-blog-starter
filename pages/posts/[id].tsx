@@ -6,6 +6,7 @@ import { PostMetadata } from "../../types/PostMetadata";
 import Layout from "../../components/layout";
 import Head from "next/head";
 import PostHeader from "../../components/post-header";
+import { getProseClass } from "../../helpers/theme";
 
 const Post: FunctionComponent<PostProps> = (props) => {
     const { post } = props;
@@ -21,7 +22,7 @@ const Post: FunctionComponent<PostProps> = (props) => {
                     <div className="p-8">
                         <PostHeader post={post}></PostHeader>
                         <div
-                            className={`prose prose-${post.theme} max-w-3xl mx-auto`}
+                            className={`prose ${getProseClass(post.theme)} max-w-3xl mx-auto`}
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
                     </div>
