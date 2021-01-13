@@ -13,9 +13,9 @@ const PostHeader: FunctionComponent<PostHeaderProps> = (props) => {
 
     return (
         <header>
-            <time className="text-gray-600">
+            <time className="text-gray-600 flex items-center">
                 <FontAwesomeIcon
-                    className={`mr-2 text-${post.theme}-500`}
+                    className={`mr-2 h-4 text-${post.theme}-500`}
                     icon={faClock}
                 ></FontAwesomeIcon>
                 {post.date}
@@ -24,7 +24,7 @@ const PostHeader: FunctionComponent<PostHeaderProps> = (props) => {
             {/* POST TAGS */}
             <div className="flex items-center">
                 <FontAwesomeIcon
-                    className={`mr-2 text-${post.theme}-500`}
+                    className={`mr-2 h-4 text-${post.theme}-500`}
                     icon={faTag}
                 ></FontAwesomeIcon>
                 {post.tags && <TagList tags={post.tags}></TagList>}

@@ -1,5 +1,7 @@
 import { FunctionComponent } from "react";
 import TagList from "./TagList";
+import Link from "next/link"
+
 type PostCardProps = {
     tags: string[];
     title: string;
@@ -22,7 +24,9 @@ const PostCard: FunctionComponent<PostCardProps> = (props) => {
                     <p className="text-gray-500">{description}</p>
                 </div>
             </div>
-            <a href={`posts/${id}`} className="absolute inset-0"></a>
+            <Link href={`posts/${id}`}>
+                <a className="absolute inset-0"></a>
+            </Link>
         </div>
     );
 };
