@@ -4,6 +4,7 @@ import { faClock, faTag } from "@fortawesome/free-solid-svg-icons";
 import { PostMetadata } from "../types/PostMetadata";
 import TagList from "./TagList";
 import { getBackgroundClass, getTextClass } from "../helpers/theme";
+import { getFormattedDate } from "../helpers/date";
 
 type PostHeaderProps = {
     post: PostMetadata;
@@ -19,7 +20,7 @@ const PostHeader: FunctionComponent<PostHeaderProps> = (props) => {
                     className={`mr-2 h-4 ${getTextClass(post.theme)}`}
                     icon={faClock}
                 ></FontAwesomeIcon>
-                {post.date}
+                {getFormattedDate(post.date)}
             </time>
             <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6 dark:text-cool-gray-100">{post.title}</h1>
             {/* POST TAGS */}
