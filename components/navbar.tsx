@@ -14,7 +14,7 @@ const Navbar: FunctionComponent<NavbarProps> = (props) => {
     const [mobileMenuIsOpen, setMobileMenuIsOpen] = React.useState(false);
 
     return (
-        <nav className="bg-gray-800">
+        <nav className="bg-cool-gray-800">
             <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div className="relative flex items-center justify-between h-16">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -42,7 +42,7 @@ const Navbar: FunctionComponent<NavbarProps> = (props) => {
                         </div>
 
                         <div className="hidden md:block">
-                            <SocialLinks></SocialLinks>
+                            <SocialLinks color="#F1F5F9"></SocialLinks>
                         </div>
                     </div>
                 </div>

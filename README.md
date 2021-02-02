@@ -93,7 +93,7 @@ const Config: ConfigProps = {
 ## Update blog's title
 To update your blog's title, just go to `./components/hero.tsx` and change the following section:
 ```ts
-<h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+<h1 className="text-4xl tracking-tight font-extrabold text-cool-gray-900 sm:text-5xl md:text-6xl">
     // Change this section
     <span>techblog</span>
     <span className="text-indigo-600 xl:inline">.dev</span>

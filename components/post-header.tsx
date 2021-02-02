@@ -14,14 +14,14 @@ const PostHeader: FunctionComponent<PostHeaderProps> = (props) => {
 
     return (
         <header>
-            <time className="text-gray-600 flex items-center">
+            <time className="text-cool-gray-600 dark:text-cool-gray-300 flex items-center">
                 <FontAwesomeIcon
                     className={`mr-2 h-4 ${getTextClass(post.theme)}`}
                     icon={faClock}
                 ></FontAwesomeIcon>
                 {post.date}
             </time>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6">{post.title}</h1>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl mb-6 dark:text-cool-gray-100">{post.title}</h1>
             {/* POST TAGS */}
             <div className="flex items-center">
                 <FontAwesomeIcon

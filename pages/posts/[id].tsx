@@ -17,12 +17,12 @@ const Post: FunctionComponent<PostProps> = (props) => {
                 <title>{post.title}</title>
             </Head>
             <Layout>
-                <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white">
+                <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white dark:bg-cool-gray-800">
                     <img src={post.coverUrl} className="object-cover w-full h-auto" />
                     <div className="p-8">
                         <PostHeader post={post}></PostHeader>
                         <div
-                            className={`prose ${getProseClass(post.theme)} max-w-3xl mx-auto`}
+                            className={`prose ${getProseClass(post.theme)} max-w-3xl mx-auto dark:text-cool-gray-100`}
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
                     </div>

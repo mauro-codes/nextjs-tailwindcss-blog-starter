@@ -13,13 +13,13 @@ type SocialLinksProps = {
 };
 
 const SocialLinks: FunctionComponent<SocialLinksProps> = (props) => {
-    const { color = "#FFF", height = "h-5" } = props;
+    const { height = "h-5", color } = props;
     const { socialLinks } = Config;
     return (
         <div className="flex items-center">
             {socialLinks.map((link) => (
                 <Link href={link.url}>
-                    <a target="_blank">
+                    <a target="_blank" className="dark:text-cool-gray-100">
                         <FontAwesomeIcon
                             icon={link.icon}
                             className={`mx-4 block ${height}`}

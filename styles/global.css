@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+    .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose strong, .prose code, .prose blockquote {
+        color: #F3F4F6;
+    }
+
+    .prose pre, .prose code {
+        background-color: #111827;
+    }
+
+    .prose code {
+        padding: 4px 6px;
+        border-radius: 10px;
+    }
+}

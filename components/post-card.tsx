@@ -18,10 +18,10 @@ const PostCard: FunctionComponent<PostCardProps> = (props) => {
         <div className="relative">
             <div className="w-full h-full">
                 <img src={coverUrl} alt="" className="object-cover h-auto lg:h-44 w-full" />
-                <div className="p-4 bg-white">
+                <div className="p-4 bg-white dark:bg-cool-gray-800">
                     <TagList tags={tags}></TagList>
-                    <h2 className="text-2xl font-semibold mb-3">{title}</h2>
-                    <p className="text-gray-500">{description}</p>
+                    <h2 className="text-2xl font-semibold mb-3 dark:text-cool-gray-100">{title}</h2>
+                    <p className="text-cool-gray-500 dark:text-cool-gray-300">{description}</p>
                 </div>
             </div>
             <a href={`posts/${id}`} className="absolute inset-0"></a>
