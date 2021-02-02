@@ -136,7 +136,7 @@ const Config: ConfigProps = {
 
 # Roadmap
 Here's a list of the upcoming features I'm working on:
-- Dark mode support using tailwindcss
+- Dark mode support using tailwindcss ✅
 - Localization
 - Customizable themes for the entire site
 - RSS feed
