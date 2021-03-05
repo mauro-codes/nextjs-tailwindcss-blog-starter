@@ -35,6 +35,7 @@ By adding the "theme" metadata at the top of your posts, you can change the acce
 
 ### Series
 You can optionally add the "series" metadata at the top of your posts to create series. Series will allow you to easily group two or more posts
+
 ![post series](https://i.imgur.com/b96aFHZ.png)
 
 	
