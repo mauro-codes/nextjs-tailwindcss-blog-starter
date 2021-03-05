@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FunctionComponent } from "react";
+import { getBorderClass } from "../helpers/theme";
 import { PostMetadata } from "../types/PostMetadata";
 
 type SeriesCardProps = {
@@ -12,7 +13,7 @@ const SeriesCard: FunctionComponent<SeriesCardProps> = (props) => {
     const { post, related } = props
 
     return (
-        <section className={`text-white border-l-8 border-${post.theme}-500 p-4 mb-4 rounded bg-cool-gray-900`}>
+        <section className={`text-white border-l-8 ${getBorderClass(post.theme)} p-4 mb-4 rounded bg-cool-gray-900`}>
             <p className="mb-2">Series:</p>
             {related.map((relatedPost, index) => {
                 if (relatedPost.id !== post.id) {
