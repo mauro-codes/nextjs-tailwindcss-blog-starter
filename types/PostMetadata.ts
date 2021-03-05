@@ -5,6 +5,7 @@ export type PostMetadata = {
     coverUrl: string
     content: string
     tags: string[]
-    description: string,
+    description: string
     theme: string
+    series: string
 }

@@ -34,7 +34,11 @@ const PostCard: FunctionComponent<PostCardProps> = (props) => {
                     <p className="text-cool-gray-500 dark:text-cool-gray-300">{description}</p>
                 </div>
             </div>
-            <a href={`posts/${id}`} className="absolute inset-0"></a>
+
+            <Link href={`./posts/${id}`}>
+                <a className="absolute inset-0"></a>
+            </Link>
+            
         </div>
     );
 };

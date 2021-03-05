@@ -46,7 +46,30 @@ const getPostData = async (id: string): Promise<PostMetadata> => {
     } as PostMetadata
 }
 
-const getSortedPostsData = (): PostMetadata[] => {
+const getPostsBySeries = (series: string): PostMetadata[] => {
+    const posts = getPostsData()
+    return sortPosts(posts, "asc").filter(p => p.series === series)
+}
+
+const sortPosts = (posts: PostMetadata[], direction: "asc" | "desc" = "desc"): PostMetadata[] => {
+    return posts.sort((a, b) => {
+        if(direction === "desc") {
+            if (a.date < b.date) {
+                return 1
+            } else {
+                return -1
+            }
+        } else {
+            if (a.date < b.date) {
+                return -1
+            } else {
+                return 1
+            }
+        }
+    })
+}
+
+const getPostsData = (): PostMetadata[] => {
     // Get file names under /posts
     const fileNames = fs.readdirSync(postsDirectory)
     const allPostsData = fileNames.map(fileName => {
@@ -68,13 +91,7 @@ const getSortedPostsData = (): PostMetadata[] => {
         } as PostMetadata
     })
     // Sort posts by date
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1
-        } else {
-            return -1
-        }
-    })
+    return sortPosts(allPostsData)
 }
 
-export { getAllPostsIds, getPostData, getSortedPostsData }
+export { getAllPostsIds, getPostData, getPostsData, getPostsBySeries }

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FunctionComponent } from "react";
 import Hero from "../components/hero";
 import PostList from "../components/post-list";
-import { getSortedPostsData } from "../lib/posts";
+import { getPostsData } from "../lib/posts";
 import { PostMetadata } from "../types/PostMetadata";
 import Layout from "../components/layout";
 
@@ -37,7 +37,7 @@ type HomeProps = {
 }
 
 const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
-    const posts = getSortedPostsData();
+    const posts = getPostsData();
     return {
         props: { posts },
     };

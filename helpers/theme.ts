@@ -15,6 +15,23 @@ const getBackgroundClass = (theme: string) => {
     }    
 }
 
+const getBorderClass = (theme: string) => {
+    switch (theme){
+        case "pink":
+            return "border-pink-500"
+        case "red":
+            return "border-red-500"
+        case "blue":
+            return "border-blue-500"
+        case "yellow":
+            return "border-yellow-500"
+        case "green":
+            return "border-green-500"
+        default: 
+            return "border-indigo-500"
+    }    
+}
+
 const getTextClass = (theme: string) => {
     switch (theme){
         case "pink":
@@ -49,4 +66,4 @@ const getProseClass = (theme: string) => {
     }    
 }
 
-export { getBackgroundClass, getTextClass, getProseClass }
+export { getBackgroundClass, getTextClass, getProseClass, getBorderClass }

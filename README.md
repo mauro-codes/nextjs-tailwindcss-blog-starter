@@ -31,7 +31,12 @@ theme: 'indigo'
 ---
 ```
 ### Themes
-By adding the "theme" meta-data at the top of your posts, you can change the accent color for each post. This feature use the tailwindcss colors behind the scene so you can choose between red, green, blue, indigo, yellow, etc.
+By adding the "theme" metadata at the top of your posts, you can change the accent color for each post. This feature use the tailwindcss colors behind the scene so you can choose between red, green, blue, indigo, yellow, etc.
+
+### Series
+You can optionally add the "series" metadata at the top of your posts to create series. Series will allow you to easily group two or more posts
+![post series](https://i.imgur.com/b96aFHZ.png)
+
 	
 **Indigo theme**
 
@@ -142,7 +147,7 @@ Here's a list of the upcoming features I'm working on:
 - RSS feed
 - MDX support
 - Navigation by tag and by year
-- Support for series of posts
+- Support for series of posts ✅
 
 
 If you want to support my work, you can [☕️ buy me a coffe](https://www.buymeacoffee.com/mauro.codes)
