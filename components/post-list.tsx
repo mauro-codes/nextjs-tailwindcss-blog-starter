@@ -16,7 +16,7 @@ const PostList: FunctionComponent<PostListProps> = (props) => {
             </h1>
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 grid-flow-row auto-rows-fr">
                 {items.map((item) => (
-                    <PostCard {...item}></PostCard>
+                    <PostCard key={item.id} {...item}></PostCard>
                 ))}
             </div>
         </div>
