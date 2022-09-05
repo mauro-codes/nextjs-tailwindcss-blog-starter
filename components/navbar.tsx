@@ -32,6 +32,7 @@ const Navbar: FunctionComponent<NavbarProps> = (props) => {
                                 <div className="flex space-x-4">
                                     {Config.navbarLinks.map((link) => (
                                         <NavbarLink
+                                            key={link.text}
                                             type="DESKTOP"
                                             text={link.text}
                                             href={link.href}
@@ -54,6 +55,7 @@ const Navbar: FunctionComponent<NavbarProps> = (props) => {
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         {Config.navbarLinks.map((link) => (
                             <NavbarLink
+                                key={link.text}
                                 type="MOBILE"
                                 text={link.text}
                                 href={link.href}

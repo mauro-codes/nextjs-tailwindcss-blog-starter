@@ -18,7 +18,7 @@ const SocialLinks: FunctionComponent<SocialLinksProps> = (props) => {
     return (
         <div className="flex items-center">
             {socialLinks.map((link) => (
-                <Link href={link.url}>
+                <Link key={link.url} href={link.url}>
                     <a target="_blank" className="dark:text-cool-gray-100">
                         <FontAwesomeIcon
                             icon={link.icon}
